@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FriendQuiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section id="home" class="screen active">
+        <div class="container">
+            <div class="logo">🌊</div>
+            <h1>FriendQuiz</h1>
+            <p>How well do you know Rico?</p>
+
+            <button id="playButton">🎮 Take a Quiz</button>
+            <button id="leaderboardButton">🏆 Leaderboard</button>
+            <button id="createButton">✨ Create a Quiz</button>
+        </div>
+    </section>
+
+
+    <section id="nameScreen" class="screen">
+        <div class="container">
+            <h1>Who's Playing?</h1>
+            <p>Enter your name.</p>
+
+            <input
+                id="playerName"
+                type="text"
+                placeholder="Your name"
+                maxlength="30"
+            >
+
+            <button id="startButton">🚀 Start Quiz</button>
+            <button id="nameBackButton">← Back</button>
+        </div>
+    </section>
+
+
+    <section id="quizScreen" class="screen">
+        <div class="container quiz-container">
+
+            <div class="quiz-top">
+                <span id="questionNumber">Question 1/19</span>
+                <span id="scoreText">Score: 0</span>
+            </div>
+
+            <div class="progress">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <div class="question-card">
+                <h2 id="question">Question</h2>
+            </div>
+
+            <div id="answers" class="answers"></div>
+
+            <button id="nextButton" disabled>
+                Next →
+            </button>
+
+        </div>
+    </section>
+
+
+    <section id="resultScreen" class="screen">
+        <div class="container">
+
+            <div id="resultEmoji" class="result-emoji">🏆</div>
+
+            <h1 id="resultTitle">Quiz Complete!</h1>
+
+            <h2>
+                <span id="finalScore">0</span>/19
+            </h2>
+
+            <p id="percentage">You got 0% correct.</p>
+
+            <p id="resultMessage">Nice job!</p>
+
+            <button id="resultLeaderboardButton">
+                🏆 Leaderboard
+            </button>
+
+            <button id="playAgainButton">
+                🔄 Play Again
+            </button>
+
+            <button id="resultHomeButton">
+                🏠 Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <section id="leaderboardScreen" class="screen">
+        <div class="container">
+
+            <h1>🏆 Leaderboard</h1>
+            <p>Top scores from everyone</p>
+
+            <div id="leaderboardList">
+                <p>Loading...</p>
+            </div>
+
+            <button id="leaderboardPlayButton">
+                🎮 Play Quiz
+            </button>
+
+            <button id="leaderboardHomeButton">
+                🏠 Home
+            </button>
+
+        </div>
+    </section>
+
+
+    <section id="createScreen" class="screen">
+        <div class="container">
+
+            <h1>✨ Create Quiz</h1>
+
+            <p>Create your own quiz for your friends.</p>
+
+            <input
+                id="quizTitle"
+                type="text"
+                placeholder="Quiz title"
+                maxlength="50"
+            >
+
+            <div id="questionBuilder"></div>
+
+            <button id="addQuestionButton">
+                + Add Question
+            </button>
+
+            <button id="createQuizButton">
+                🚀 Create Quiz
+            </button>
+
+            <button id="createHomeButton">
+                ← Back
+            </button>
+
+        </div>
+    </section>
+
+
+    <script type="module" src="./script.js"></script>
+
+</body>
+      </html>
